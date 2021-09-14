@@ -1,0 +1,198 @@
+# The layout of this file. Don't change this.
+format: 1
+
+title: PIER 2021 output data descriptions for EDITS
+description: |-
+  Perspectives on India Energy based on Rumi (PIER) model output
+
+provider:
+  organisation: Prayas (Energy Group) or PEG
+  contact: energy.model@prayaspune.org
+
+# Don't worry about these for now. EDITS will define a larger set to capture
+# other attributes of entire data sets.
+classifiers:
+- "Kind :: Model output"
+- "Availability :: Public"
+- "Usage :: Cite and acknowledge required"
+
+measure:
+  Final electrical energy consumption:
+    description: >-
+      Final electrical energy consumption by end-use (demand) sector
+  Final other energy consumption:
+    description: >-
+      Final non-electrical energy consumption by end-use (demand) sector
+  Primary energy supply:
+    description: >-
+      Primary energy supply by energy carrier
+  Electrical energy transfers:
+    description: >-
+      Transfer of electricity from one geography (place of production or storage) to another (place of end-use or storage)
+  Other energy transfers:
+    description: >-
+      Transfer of non-electrical energy from one geography (place of production or storage) to another (place of end-use or storage)
+
+quantity:
+- measure: Final electrical energy consumption
+  dimensions: [Scenario, Year, Season, Dayslice, Geography, ConsumerType, DemandSector, EnergyCarrier, EnergyService, ServiceTech, EfficiencyLevels]
+  units: GWh
+  description: Final electrical energy consumption by end-use (demand) sector
+- measure: Final other energy consumption
+  dimensions: [Scenario, Year, Season, Dayslice, Geography, ConsumerType, DemandSector, EnergyCarrier, EnergyService, ServiceTech, EfficiencyLevels]
+  units: PJ
+  description: Final non-electrical energy consumption by end-use (demand) sector
+- measure: Primary energy supply
+  dimensions: [Scenario, Year, Season, Dayslice, Geography, EnergyCarrier]
+  units: PJ
+  description: Primary energy supply by energy carrier
+- measure: Electrical energy transfers
+  dimensions: [Scenario, Year, Season, Dayslice, Geography, Geography, EnergyCarrier]
+  units: PJ or GWh
+  description: Transfer of electricity from one geography (place of production or storage) to another (place of end-use or storage)
+- measure: Other energy transfers
+  dimensions: [Scenario, Year, Season, Dayslice, Geography, Geography, EnergyCarrier]
+  units: PJ or GWh
+  description: Transfer of non-electrical energy carriers from one geography (place of production or storage) to another (place of end-use or storage)
+
+dimension:
+  Year:
+    scope: 2021-2030
+    resolution: season, dayslice
+    description: yearly steps from 2021 to 2030 assumed to go from April 1st to March 31st.
+  Geography:
+    scope: India
+    resolution: SubGeography1, SubGeography2
+    description: All major Indian states. North-east combined into one state. Union territories combined into one state.
+  ConsumerType:
+    scope: global
+    resolution: ConsumerType1, ConsumerType2
+    description: Consumer levels
+  Scenario:
+    scope: global
+    resolution: Ref, PRS, ORS
+    description: Scenarios defined in PIER 2021
+  Season:
+    scope: year
+    resolution: SUMMER, MONSOON, AUTUMN, WINTER, SPRING
+    description: Seasons in a year
+  Dayslice:
+    scope: day
+    resolution: EARLY, MORN, MID, AFTERNOON, EVENING, NIGHT
+    description: Timeslices in a day
+  SubGeography1:
+    scope: Geography
+    resolution: ER, WR, NR, SR, NER
+    description: Regions
+  SubGeography2:
+    scope: ER
+    resolution: BR, JH, OD, WB
+    description: States within eastern region
+  SubGeography2:
+    scope: WR
+    resolution: CG, GJ, MP, MH, GA, UT
+    description: States within western region
+  SubGeography2:
+    scope: NR
+    resolution: DL, HR, HP, JK, PB, RJ, UP, UK
+    description: States within northern region
+  SubGeography2:
+    scope: SR
+    resolution: AP, KA, KL, TN, TS
+    description: States within southern region
+  SubGeography2:
+    scope: NER
+    resolution: AS, NE
+    description: States within north-eastern region
+  ConsumerType1:
+    scope: D_RES
+    resolution: RURAL, URBAN
+    description: >-
+      Residential consumer types:
+      Rural, Urban
+  ConsumerType2:
+    scope: RURAL, URBAN
+    resolution: Q1, Q2, Q3, Q4, q5
+    description: >-
+      Residential expenditure quintiles:
+      Quintile 1, Quintile 2, Quintile 3, Quintile 4, Quintile 5
+  EnergyCarrier:
+    scope: global
+    resolution: PhysicalEnergyCarriers, NonPhysicalEnergyCarriers
+    description: >-
+      Energy carriers: Physical energy carriers, Non-physical energy carriers
+  EnergyCarrier:
+    scope: PhysicalEnergyCarriers
+    resolution: PhysicalPrimaryCarriers, PhysicalDerivedCarriers
+    description: Physical energy carriers
+  EnergyCarrier:
+    scope: NonPhysicalEnergyCarriers
+    resolution: NonPhysicalPrimaryCarriers, NonPysicalDerivedCarriers
+    description: Non-physical energy carriers
+  EnergyCarrier:
+    scope: PhysicalPrimaryCarriers
+    resolution: COKING_COAL, STEAM_COAL, NATGAS, BIOGAS, BIOMASS, CRUDE
+    description: >-
+      Physical primary energy carriers:
+      Coking coal, Steam coal, Natural gas, Biogas, Biomass, Crude
+  EnergyCarrier:
+    scope: PhysicalDerivedCarriers
+    resolution: MS, HSD, ATF, LPG, PP_OTHER
+    description: Physical derived energy carriers
+  EnergyCarrier:
+    scope: NonPhysicalPrimaryCarriers
+    resolution: SUNLIGHT, WIND, HYDEL, ATOMIC
+    description: >-
+      Non-physical primary energy carriers:
+      Sunlight, Wind, Hydel, Atomic
+  EnergyCarrier:
+    scope: NonPysicalDerivedCarriers
+    resolution: ELECTRICITY
+    description: >-
+      Non-physical derived energy carriers: Electricity
+  DemandSector:
+    scope: global
+    resolution: D_RES, D_IND, D_AGRI, D_TRANS, D_OTHER
+    description: >-
+      Demand sectors supported in PIER:
+      Residential, Industry, Agriculture, Transport, Other
+  EnergyService:
+    scope: D_RES
+    resolution: RES_LIGHT, RES_COOL, RES_REF, RES_COOK
+    description: >-
+      Energy services that are modelled bottom up:
+      Lighting, Space cooling, Refrigeration, Cooking
+  ServiceTech:
+    scope: RES_LIGHT
+    resolution: LIGHT_ELEC
+    description: >-
+      Lighting service technologies: Electric lighting
+  ServiceTech:
+    scope: RES_COOL
+    resolution: FAN, COOLER, AC
+    description: >-
+      Space cooling service technologies:
+      Fan, Cooler, Air Conditioner
+  ServiceTech:
+    scope: RES_REF
+    resolution: FRIDGE
+    description: >-
+      Refrigeration service technologies: Fridge
+  ServiceTech:
+    scope: RES_COOK
+    resolution: LPG, PNG, BIOMASS, BIOGAS, INDUCTION
+    description: >-
+      Cooking service technologies:
+      Liquefied Petroleum Gas, Piped Natural Gas, Biomass, Biogas, Induction
+  EfficiencyLevels:
+    scope: LIGHT_ELEC
+    resolution: INCAND, CFL, LED
+    description: >-
+      Electric lighting efficiency levels:
+      Incandescent bulbs, Compact Fluorescent Lamps, LED lamps
+  EfficiencyLevels:
+    scope: AC, FRIDGE
+    resolution: 3STAR, 4STAR, 5STAR
+    description: >-
+      Air-conditioner and refrigerator efficiency levels:
+      3-Star, 4-Star, 5-Star
