@@ -39,24 +39,24 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 # Description of PIER 
 ## Scenarios and Sensitivity runs 
 PIER models three scenarios: 
-1. Reference (S1_Ref)
-2. Pessimistic Recovery Scenario (S2_PRS) and
-3. Optimistic Recovery Scenario (S3_ORS) 
+1. Reference (`S1_Ref`)
+2. Pessimistic Recovery Scenario (`S2_PRS`) and
+3. Optimistic Recovery Scenario (`S3_ORS`) 
 
 Apart from these, PIER includes the following sensitivity runs:
-1.	Higher and lower trigger and reference temperatures for space cooling (Sens01_TrigRefTempHi & Sens01_TrigRefTempLo)
-2.	Lower feasibility of solar and wind capacity addition (Sens02_LowerSolarWindAddn) 
-3.	Equal feasibility of solar and wind capacity addition (Sens02_EqualSolarWindAddn)
-4.	Different trajectories of renewable and fossil-fuel costs (Sens03_Costs_HighRELowFossil & Sens03_Costs_LowREHighFossil)
-5.	Higher and lower costs of storage (Sens04_Costs_StorageCapexHigh & Sens04_Costs_StorageCapexLow)
-6.	Maximum appliance efficiency in the horizon year (Sens05_ApplEfficiencyHi)
+1.	Higher and lower trigger and reference temperatures for space cooling (`Sens01_TrigRefTempHi` & `Sens01_TrigRefTempLo`)
+2.	Lower feasibility of solar and wind capacity addition (`Sens02_LowerSolarWindAddn`) 
+3.	Equal feasibility of solar and wind capacity addition (`Sens02_EqualSolarWindAddn`)
+4.	Different trajectories of renewable and fossil-fuel costs (`Sens03_Costs_HighRELowFossil` & `Sens03_Costs_LowREHighFossil`)
+5.	Higher and lower costs of storage (`Sens04_Costs_StorageCapexHigh` & `Sens04_Costs_StorageCapexLow`)
+6.	Maximum appliance efficiency in the horizon year (`Sens05_ApplEfficiencyHi`)
 
 ## PIER folder structure
 PIER follows the folder structure as requried by Rumi. Detailed documentation of Rumi is available at https://github.com/prayas-energy/Rumi `Docs.zip` under the latest release tag.
 
 ## PIER scenario data
 
-`Docs/Parameters & Source file-map.xlsx` is the starting point in PIER to understand the data being released with PIER. It lists the various 'source' files (xlsx) which are used to build the actual input data for the model. It also lists the various 'parameter' files (csv) that form the actual input data used in any scenario. Each source file has detailed documentation on how parameter data is constructed in that source file, and includes all the relevant data sources, assumptions and methodology used. The source files are found under `Common/Source`, `Demand/Source` and `Supply/Source` of the respective scenario or sensitivity run, and the parameter files are found under `Common/Parameters`, `Demand/Parameters` and `Supply/Parameters`. 
+[`Docs/Parameters & Source file-map.xlsx`](Docs/Parameters%20%26%20Source%20file-map.xlsx) is the starting point in PIER to understand the data being released with PIER. It lists the various 'source' files (xlsx) which are used to build the actual input data for the model. It also lists the various 'parameter' files (csv) that form the actual input data used in any scenario. Each source file has detailed documentation on how parameter data is constructed in that source file, and includes all the relevant data sources, assumptions and methodology used. The source files are found under `Common/Source`, `Demand/Source` and `Supply/Source` of the respective scenario or sensitivity run, and the parameter files are found under `Common/Parameters`, `Demand/Parameters` and `Supply/Parameters`. 
 
 ## PIER outputs
 
