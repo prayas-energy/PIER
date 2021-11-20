@@ -1,0 +1,52 @@
+name: Complete run
+
+on:
+  
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+    
+jobs:
+  data_validation:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+          python-version: "3.8"
+          
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        path: main
+
+        
+    - name: Checkout Platform
+      uses: actions/checkout@v2
+      with:
+        repository: prayas-energy/Rumi
+        path: Rumi
+
+        
+    - name: Install dependencies
+      run: |
+        cd Rumi
+        python -m pip install --upgrade pip
+        pip install -e .
+        cd -
+        
+    - name: Run Demand Processing
+      id: demand
+      run: |
+        rumi_demand -m PIER -s xyz
+
+    - name: Validate Supply
+      id: supply
+      run: |
+        rumi_validate -m PIER -s xyz -p Supply
+
+  
