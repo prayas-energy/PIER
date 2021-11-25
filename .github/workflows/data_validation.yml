@@ -1,12 +1,6 @@
 name: Complete run
 
-on:
-  
-  push:
-    # Sequence of patterns matched against refs/tags
-    tags:
-    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
-
+on: workflow_dispatch
     
 jobs:
   data_validation:
@@ -42,11 +36,11 @@ jobs:
     - name: Run Demand Processing
       id: demand
       run: |
-        rumi_demand -m PIER -s xyz
+        rumi_demand -m . -s xyz
 
     - name: Validate Supply
       id: supply
       run: |
-        rumi_validate -m PIER -s xyz -p Supply
+        rumi_validate -m . -s xyz -p Supply
 
   
