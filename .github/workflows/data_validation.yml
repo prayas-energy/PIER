@@ -36,11 +36,11 @@ jobs:
     - name: Run Demand Processing
       id: demand
       run: |
-        rumi_demand -m . -s xyz
+        rumi_demand -m ../ -s xyz
 
     - name: Validate Supply
       id: supply
       run: |
-        rumi_validate -m . -s xyz -p Supply
+        rumi_validate -m ../ -s xyz -p Supply
 
   
