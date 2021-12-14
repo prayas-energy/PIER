@@ -16,7 +16,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        path: main
+        path: PIER
 
         
     - name: Checkout Platform
