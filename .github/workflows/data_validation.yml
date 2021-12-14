@@ -32,15 +32,22 @@ jobs:
         python -m pip install --upgrade pip
         pip install -e .
         cd -
-        
+
+    - name: check folder structure
+      run: |
+        ls
+        ls *
+        pwd
+
+      
     - name: Run Demand Processing
       id: demand
       run: |
-        rumi_demand -m /home/runner/work/PIER/PIER/PIER -s xyz
+        rumi_demand -m $GITHUB_WORKSPACE/PIER -s xyz
 
     - name: Validate Supply
       id: supply
       run: |
-        rumi_validate -m /home/runner/work/PIER/PIER/PIER -s xyz -p Supply
+        rumi_validate -m $GITHUB_WORKSPACE/PIER -s xyz -p Supply
 
   
