@@ -13,19 +13,20 @@ jobs:
       with:
           python-version: "3.8"
           
+
     - name: Checkout
       uses: actions/checkout@v2
       with:
         path: PIER
 
-        
+
     - name: Checkout Platform
       uses: actions/checkout@v2
       with:
         repository: prayas-energy/Rumi
         path: Rumi
 
-        
+
     - name: Install dependencies
       run: |
         cd Rumi
@@ -33,21 +34,14 @@ jobs:
         pip install -e .
         cd -
 
-    - name: check folder structure
-      run: |
-        ls
-        ls *
-        pwd
 
-      
     - name: Run Demand Processing
       id: demand
       run: |
         rumi_demand -m $GITHUB_WORKSPACE/PIER -s xyz
 
+
     - name: Validate Supply
       id: supply
       run: |
         rumi_validate -m $GITHUB_WORKSPACE/PIER -s xyz -p Supply
-
-  

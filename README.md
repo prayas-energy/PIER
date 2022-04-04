@@ -63,7 +63,7 @@ PIER follows the folder structure as requried by Rumi. Detailed documentation of
 The outputs of each of the scenarios and sensitivity analyses are provided under the corresponding `Demand/Outputs` and `Supply/Outputs` directories of the scenario or sensitivity run. 
 
 ## Version 
-PIER v1.0.0 is in sync with Rumi v1.0.0.
+PIER v1.1.0 is in sync with Rumi v1.1.0.
 
 <a href="https://github.com/prayas-energy/Rumi"><img src="https://github.com/prayas-energy/Rumi/blob/main/Docs/graphics/Rumi-Logo-75dpi.png" width="200"></a>
 

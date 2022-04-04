@@ -1,11 +1,12 @@
-EnergyCarrier,EmissionType,DomEmissionFactor,ImpEmissionFactor
-COKING_COAL,GHG,2.016706715,2.016706715
-STEAM_COAL,GHG,1.7209896,1.7209896
-MS,GHG,3.092910612,3.092910612
-HSD,GHG,3.100563325,3.100563325
-ATF,GHG,2.966903495,2.966903495
-LPG,GHG,2.77,2.77
-PP_OTHER,GHG,2.9,2.9
-NATGAS,GHG,1900,1900
-BIOGAS,GHG,1130,1130
-BIOMASS,GHG,1.6,1.6
+EnergyCarrier,EmissionType,DomEmissionFactor,ImpEmissionFactor,Remarks
+COKING_COAL,GHG,2257.68051,2760.9,"Note that all coking coal in PIER is assumed to be imported. Even though the domestic emission factor is not used, it is provided since both domestic and imported fuel emission factors are expected in Rumi"
+STEAM_COAL,GHG,1888.148514,1982.18603,
+MS,GHG,3080.7549,3080.7549,
+HSD,GHG,3196.749,3196.749,
+ATF,GHG,3080.7549,3080.7549,
+LPG,GHG,2987.20785,2987.20785,
+PP_OTHER,GHG,3160.95028,3160.95028,
+NATGAS,GHG,3025.024549,2048.51616,
+BIOGAS,GHG,2001.5626,1246.1226,Density of biogas is assumed to be same as natural gas
+BIOMASS,GHG,1656.436688,1656.436688,
+CRUDE,GHG,54.23219241,0,"As only fugitive emissions are applicable to crude, emissions for imported crude is assumed as 0 for the ModelGeography"
