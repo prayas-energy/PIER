@@ -1,4 +1,0 @@
-EnergyStorTech,GeographicGranularity,TimeGranularity,Comment
-FOURHR_BATTERY,MODELGEOGRAPHY,YEAR,The TimeGranularity is irrelevant - all relevant parameters are at annual granularity! 
-SIXHR_BATTERY,MODELGEOGRAPHY,YEAR,
-PUMPED_STOR,MODELGEOGRAPHY,YEAR,

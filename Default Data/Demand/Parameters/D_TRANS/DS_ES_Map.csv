@@ -1,0 +1,6 @@
+DemandSector,EnergyService,InputType
+D_TRANS,ShortDistPass,BOTTOMUP
+D_TRANS,LongDistPass,BOTTOMUP
+D_TRANS,Freight,BOTTOMUP
+D_TRANS,IntAirPass,BOTTOMUP
+D_TRANS,IntFreight,BOTTOMUP

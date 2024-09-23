@@ -1,4 +1,0 @@
-EnergyStorTech,StoredEC,DomOrImp,MaxChargeRate,MaxDischargeRate,StorPeriodicity,Comment
-FOURHR_BATTERY,ELECTRICITY,EC_DOM,0.25,0.25,DAILY,For now making all storages daily cycling - given computational constraints
-SIXHR_BATTERY,ELECTRICITY,EC_DOM,0.166667,0.166667,DAILY,
-PUMPED_STOR,ELECTRICITY,EC_DOM,0.2,0.2,DAILY,Pumped storage discharges over 5 hours
